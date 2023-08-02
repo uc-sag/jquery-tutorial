@@ -30,6 +30,7 @@ $(document).ready(function(){
 });
 </script>
 
+
 </head>
 <body>
     <h2 id="test">Hello Jquery</h2>
