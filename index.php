@@ -7,130 +7,93 @@
     <title>Document</title>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<style>
+#div1 {
+  height: 100px;
+  width: 300px;
+  padding: 10px;
+  margin: 3px;
+  border: 1px solid blue;
+  background-color: lightblue;
+}
+</style>
+</head>
+<body>
+<!-- <p id="test">This is some <b>bold</b> text in a paragraph.</p>
+
+<button id="btn1">Show Text</button>
+<button id="btn2">Show HTML</button> -->
+<!-- 
+<p><a href="https://www.w3schools.com" title="some title" id="w3s">W3Schools.com</a></p>
+
+<button>Change href and title</button>
+
+<p>Mouse over the link to see that the href attribute has changed and a title attribute is set.</p> -->
+
+
+<!-- 
+<p>This is a paragraph.</p>
+<button onclick="appendText()">Append text</button> -->
+
+
+<!-- <img src="/images/w3jquery.gif" alt="jQuery" width="100" height="140">
+
+<p>Click the button to insert text after the image.</p>
+
+<button onclick="afterText()">Insert after</button> -->
+
+<div id="div1"></div>
+<br>
+
+<button>Display dimensions of div</button>
+
+<p>innerWidth() - returns the width of an element (includes padding).</p>
+<p>innerHeight() - returns the height of an element (includes padding).</p>
+
+
 <script>
-//     $(document).ready(function(){
-//         alert('doc loaded');
 
-// });
 // $(document).ready(function(){
-//   $("p").click(function(){
-//     $(this).hide();
+//   $("#btn1").click(function(){
+//     alert("Text: " + $("#test").text());
 //   });
-// });
-// $(document).ready(function(){
-//   $("#test").click(function(){
-//     $(this).hide();
+//   $("#btn2").click(function(){
+//     alert("HTML: " + $("#test").html());
 //   });
 // });
 
-// $(document).ready(function(){
-//   $(".test").click(function(){
-//     $(".test").hide();
+// $("button").click(function(){
+//   $("#w3s").attr({
+//     "href" : "https://www.w3schools.com/jquery/",
+//     "title" : "W3Schools jQuery Tutorial"
 //   });
 // });
 
+// function appendText() {
+//   var txt1 = "<p>Text.</p>";        
+//   var txt2 = $("<p></p>").text("Text."); 
+//   var txt3 = document.createElement("p");
+//   txt3.innerHTML = "Text.";       
+//   $("body").append(txt1, txt2, txt3);   
+// }
 
-// $(document).ready(function(){
-//     $("p").dblclick(function(){
-//   $(this).hide();
-// });
-// });
+// function afterText() {
+//   var txt1 = "<b>I </b>";                   
+//   var txt2 = $("<i></i>").text("love ");    
+//   var txt3 = document.createElement("b");  
+//   txt3.innerHTML = "jQuery!";
+//   $("img").after(txt1, txt2, txt3);        
+// }
 
-
-
+$("button").click(function(){
+  var txt = "";
+  txt += "Inner width: " + $("#div1").innerWidth() + "</br>";
+  txt += "Inner height: " + $("#div1").innerHeight();
+  $("#div1").html(txt);
+});
 
 
 
 </script>
-
-
-</head>
-<body>
-    <!-- <button id="hide">Hide</button>
-    <button id="show">Show</button> -->
-    <!-- <button id="toggle">Toggle</button>
-    <p>This is paragraph</p> -->
-<!-- 
-    <p>If you click on the "Hide" button, I will disappear.</p>
-
-<button id="hide">Hide</button>
-<button id="show">Show</button> -->
-<!-- <p>Demonstrate fadeTo() with different parameters.</p>
-
-<button>Click to fade boxes</button><br><br>
-
-<div id="div1" style="width:80px;height:80px;background-color:red;"></div><br>
-<div id="div2" style="width:80px;height:80px;background-color:green;"></div><br>
-<div id="div3" style="width:80px;height:80px;background-color:blue;"></div> -->
-
-<!-- <button>Start Animation</button>
-
-<p>By default, all HTML elements have a static position, and cannot be moved. To manipulate the position, remember to first set the CSS position property of the element to relative, fixed, or absolute!</p>
-
-<div style="background:#98bf21;height:100px;width:100px;position:absolute;"></div> -->
-
-
-
-<script>
-
-// $("#p1").mousedown(function(){
-//   alert("Mouse down over p1!");
-// });
-
-// $("#p1").hover(function(){
-//   alert("You entered p1!");
-// },
-// function(){
-//   alert("Bye! You now leave p1!");
-// });
-
-// $("#check").on({
-//   mouseenter: function(){
-//     $(this).css("background-color", "lightgray");
-//   },
-//   mouseleave: function(){
-//     $(this).css("background-color", "lightblue");
-//   },
-//   click: function(){
-//     $(this).css("background-color", "yellow");
-//   }
-// });
-
-// $("#hide").click(function(){
-//   $("p").hide(1000);
-// });
-
-// $("#show").click(function(){
-//   $("p").show(1000);
-// });
-
-// $("#toggle").click(function(){
-//   $("p").toggle(1000);
-// });
-
-
-// $("#hide").click(function(){
-//   $("p").hide();
-// });
-
-// $("#show").click(function(){
-//   $("p").show();
-// });
-
-// $("button").click(function(){
-//   $("#div1").fadeTo("slow", 0.15);
-//   $("#div2").fadeTo("slow", 0.4);
-//   $("#div3").fadeTo("slow", 0.7);
-// });
-
-$("button").click(function(){
-  $("div").animate({
-    left: '250px',
-    opacity: '0.5',
-    height: '150px',
-    width: '150px'
-  });
-}); 
-    </script>
 </body>
 </html>
