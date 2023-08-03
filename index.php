@@ -1,53 +1,46 @@
-
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-.ancestors * { 
-  display: block;
-  border: 2px solid lightgrey;
-  color: lightgrey;
-  padding: 5px;
-  margin: 15px;
-}
-</style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 <script>
 // $(document).ready(function(){
-//   $("span").parent().css({"color": "red", "border": "2px solid red"});
-// });
-// $(document).ready(function(){
-//   $("span").parents().css({"color": "red", "border": "2px solid red"});
+//   $("button").click(function(){
+//     $("#div1").load("demo_test.txt");
+//   });
 // });
 
 // $(document).ready(function(){
-//   $("span").parentsUntil("div");
+//   $("button").click(function(){
+//     $("#div1").load("demo_test.txt", function(responseTxt, statusTxt, xhr){
+//       if(statusTxt == "success")
+//         alert("External content loaded successfully!");
+//       if(statusTxt == "error")
+//         alert("Error: " + xhr.status + ": " + xhr.statusText);
+//     });
+//   });
 // });
 
 $(document).ready(function(){
-  $("div").find("span");
+  $("button").click(function(){
+    $.get("demo_test.asp", function(data, status){
+      alert("Data: " + data + "\nStatus: " + status);
+    });
+  });
 });
 </script>
 </head>
-<body class="ancestors"> 
-  <!-- <div style="width:500px;">div (great-grandparent)
-    <ul>ul (grandparent)  
-      <li>li (direct parent)
-        <span>span</span>
-      </li>
-    </ul>   
-  </div> -->
+<body>
 
+<!-- <div id="div1"><h2>Let jQuery AJAX Change This Text</h2></div>
 
-<div class="descendants" style="width:500px;">div (current element) 
-  <p>p (child)
-    <span>span (grandchild)</span>   
-  </p>
-  <p>p (child)
-    <span>span (grandchild)</span>
-  </p> 
-</div>
+<button>Get External Content</button> -->
 
+<!-- 
+<div id="div1"><h2>Let jQuery AJAX Change This Text</h2></div>
 
+<button>Get External Content</button> -->
+<button>Send an HTTP GET request to a page and get the result back</button>
 </body>
 </html>
+
+
